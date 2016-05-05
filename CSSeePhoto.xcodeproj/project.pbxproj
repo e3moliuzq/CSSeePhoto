@@ -37,6 +37,7 @@
 		180D5A531CDAEE5900FFF729 /* btn_navback_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180D5A511CDAEE5900FFF729 /* btn_navback_press@2x.png */; };
 		180D5A821CDAF8A600FFF729 /* PhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D5A7F1CDAF8A600FFF729 /* PhotoScrollView.m */; };
 		180D5A831CDAF8A600FFF729 /* SeePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D5A811CDAF8A600FFF729 /* SeePhotoViewController.m */; };
+		180D5A8D1CDB143900FFF729 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D5A8C1CDB143900FFF729 /* LoadingViewController.m */; };
 		181811771CD9FFC8006BAD6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181811761CD9FFC8006BAD6C /* main.m */; };
 		1818117A1CD9FFC8006BAD6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181811791CD9FFC8006BAD6C /* AppDelegate.m */; };
 		1818117D1CD9FFC8006BAD6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818117C1CD9FFC8006BAD6C /* ViewController.m */; };
@@ -116,6 +117,8 @@
 		180D5A801CDAF8A600FFF729 /* SeePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeePhotoViewController.h; sourceTree = "<group>"; };
 		180D5A811CDAF8A600FFF729 /* SeePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeePhotoViewController.m; sourceTree = "<group>"; };
 		180D5A881CDAF9AF00FFF729 /* DefineKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKey.h; sourceTree = "<group>"; };
+		180D5A8B1CDB143900FFF729 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		180D5A8C1CDB143900FFF729 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
 		181811721CD9FFC8006BAD6C /* CSSeePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSSeePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181811761CD9FFC8006BAD6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		181811781CD9FFC8006BAD6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -238,6 +241,15 @@
 			path = SeePhoto;
 			sourceTree = SOURCE_ROOT;
 		};
+		180D5A8A1CDB143900FFF729 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				180D5A8B1CDB143900FFF729 /* LoadingViewController.h */,
+				180D5A8C1CDB143900FFF729 /* LoadingViewController.m */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		181811691CD9FFC8006BAD6C = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				180D5A7D1CDAF8A600FFF729 /* SeePhoto */,
+				180D5A8A1CDB143900FFF729 /* Loading */,
 				180D5A4C1CDAEDB900FFF729 /* BaseNavigation */,
 				180D5A391CDAE9C500FFF729 /* Res */,
 				180D59F41CDAE44200FFF729 /* SDWebImage */,
@@ -460,6 +473,7 @@
 				180D5A211CDAE44200FFF729 /* UIImage+MultiFormat.m in Sources */,
 				1818117A1CD9FFC8006BAD6C /* AppDelegate.m in Sources */,
 				180D5A1C1CDAE44200FFF729 /* SDWebImageDownloaderOperation.m in Sources */,
+				180D5A8D1CDB143900FFF729 /* LoadingViewController.m in Sources */,
 				180D5A4F1CDAEDB900FFF729 /* BaseNavigationViewController.m in Sources */,
 				180D5A201CDAE44200FFF729 /* UIImage+GIF.m in Sources */,
 				180D5A191CDAE44200FFF729 /* SDWebImageCompat.m in Sources */,

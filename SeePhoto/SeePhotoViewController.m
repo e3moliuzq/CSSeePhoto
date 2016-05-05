@@ -10,6 +10,7 @@
 #import "DefineKey.h"
 #import "PhotoScrollView.h"
 #import "UIImageView+WebCache.h"
+#import "LoadingViewController.h"
 
 @interface SeePhotoViewController ()
 
@@ -463,10 +464,10 @@
 // 指定回调方法
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     if (error) {
-//        [[LoadingViewController sharedViewController] showDelayTipsWithCenter:CGPointZero text:@"保存失败" view:self.view delay:2.f];
+        [[LoadingViewController sharedViewController] showDelayTipsWithCenter:CGPointZero text:@"保存失败" view:self.view delay:2.f];
     }
     else {
-//        [[LoadingViewController sharedViewController] showDelayTipsWithCenter:CGPointZero text:@"保存成功" view:self.view delay:2.f];
+        [[LoadingViewController sharedViewController] showDelayTipsWithCenter:CGPointZero text:@"保存成功" view:self.view delay:2.f];
     }
 }
 
