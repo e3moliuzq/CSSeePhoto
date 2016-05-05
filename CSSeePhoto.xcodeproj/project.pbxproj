@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180D59F21CDAE11200FFF729 /* PhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D59EF1CDAE11200FFF729 /* PhotoScrollView.m */; };
-		180D59F31CDAE11200FFF729 /* SeePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D59F11CDAE11200FFF729 /* SeePhotoViewController.m */; };
 		180D5A161CDAE44200FFF729 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D59F61CDAE44200FFF729 /* MKAnnotationView+WebCache.m */; };
 		180D5A171CDAE44200FFF729 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D59F81CDAE44200FFF729 /* NSData+ImageContentType.m */; };
 		180D5A181CDAE44200FFF729 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D59FA1CDAE44200FFF729 /* SDImageCache.m */; };
@@ -37,6 +35,8 @@
 		180D5A4F1CDAEDB900FFF729 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D5A4E1CDAEDB900FFF729 /* BaseNavigationViewController.m */; };
 		180D5A521CDAEE5900FFF729 /* btn_navback_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180D5A501CDAEE5900FFF729 /* btn_navback_normal@2x.png */; };
 		180D5A531CDAEE5900FFF729 /* btn_navback_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180D5A511CDAEE5900FFF729 /* btn_navback_press@2x.png */; };
+		180D5A821CDAF8A600FFF729 /* PhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D5A7F1CDAF8A600FFF729 /* PhotoScrollView.m */; };
+		180D5A831CDAF8A600FFF729 /* SeePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D5A811CDAF8A600FFF729 /* SeePhotoViewController.m */; };
 		181811771CD9FFC8006BAD6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181811761CD9FFC8006BAD6C /* main.m */; };
 		1818117A1CD9FFC8006BAD6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181811791CD9FFC8006BAD6C /* AppDelegate.m */; };
 		1818117D1CD9FFC8006BAD6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818117C1CD9FFC8006BAD6C /* ViewController.m */; };
@@ -65,10 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		180D59EE1CDAE11200FFF729 /* PhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScrollView.h; sourceTree = "<group>"; };
-		180D59EF1CDAE11200FFF729 /* PhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoScrollView.m; sourceTree = "<group>"; };
-		180D59F01CDAE11200FFF729 /* SeePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeePhotoViewController.h; sourceTree = "<group>"; };
-		180D59F11CDAE11200FFF729 /* SeePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeePhotoViewController.m; sourceTree = "<group>"; };
 		180D59F51CDAE44200FFF729 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		180D59F61CDAE44200FFF729 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		180D59F71CDAE44200FFF729 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -116,6 +112,10 @@
 		180D5A4E1CDAEDB900FFF729 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		180D5A501CDAEE5900FFF729 /* btn_navback_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_navback_normal@2x.png"; sourceTree = "<group>"; };
 		180D5A511CDAEE5900FFF729 /* btn_navback_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_navback_press@2x.png"; sourceTree = "<group>"; };
+		180D5A7E1CDAF8A600FFF729 /* PhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScrollView.h; sourceTree = "<group>"; };
+		180D5A7F1CDAF8A600FFF729 /* PhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoScrollView.m; sourceTree = "<group>"; };
+		180D5A801CDAF8A600FFF729 /* SeePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeePhotoViewController.h; sourceTree = "<group>"; };
+		180D5A811CDAF8A600FFF729 /* SeePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeePhotoViewController.m; sourceTree = "<group>"; };
 		181811721CD9FFC8006BAD6C /* CSSeePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSSeePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181811761CD9FFC8006BAD6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		181811781CD9FFC8006BAD6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,17 +159,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		180D59ED1CDAE11200FFF729 /* SeePhoto */ = {
-			isa = PBXGroup;
-			children = (
-				180D59EE1CDAE11200FFF729 /* PhotoScrollView.h */,
-				180D59EF1CDAE11200FFF729 /* PhotoScrollView.m */,
-				180D59F01CDAE11200FFF729 /* SeePhotoViewController.h */,
-				180D59F11CDAE11200FFF729 /* SeePhotoViewController.m */,
-			);
-			path = SeePhoto;
-			sourceTree = "<group>";
-		};
 		180D59F41CDAE44200FFF729 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +226,17 @@
 			path = BaseNavigation;
 			sourceTree = "<group>";
 		};
+		180D5A7D1CDAF8A600FFF729 /* SeePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				180D5A7E1CDAF8A600FFF729 /* PhotoScrollView.h */,
+				180D5A7F1CDAF8A600FFF729 /* PhotoScrollView.m */,
+				180D5A801CDAF8A600FFF729 /* SeePhotoViewController.h */,
+				180D5A811CDAF8A600FFF729 /* SeePhotoViewController.m */,
+			);
+			path = SeePhoto;
+			sourceTree = SOURCE_ROOT;
+		};
 		181811691CD9FFC8006BAD6C = {
 			isa = PBXGroup;
 			children = (
@@ -260,11 +260,11 @@
 		181811741CD9FFC8006BAD6C /* CSSeePhoto */ = {
 			isa = PBXGroup;
 			children = (
+				180D5A7D1CDAF8A600FFF729 /* SeePhoto */,
 				180D5A4C1CDAEDB900FFF729 /* BaseNavigation */,
 				180D5A391CDAE9C500FFF729 /* Res */,
 				180D5A271CDAE85600FFF729 /* DefineKey.h */,
 				180D59F41CDAE44200FFF729 /* SDWebImage */,
-				180D59ED1CDAE11200FFF729 /* SeePhoto */,
 				181811781CD9FFC8006BAD6C /* AppDelegate.h */,
 				181811791CD9FFC8006BAD6C /* AppDelegate.m */,
 				1818117B1CD9FFC8006BAD6C /* ViewController.h */,
@@ -445,16 +445,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180D59F21CDAE11200FFF729 /* PhotoScrollView.m in Sources */,
 				180D5A231CDAE44200FFF729 /* UIImageView+HighlightedWebCache.m in Sources */,
 				180D5A241CDAE44200FFF729 /* UIImageView+WebCache.m in Sources */,
 				180D5A221CDAE44200FFF729 /* UIImage+WebP.m in Sources */,
 				180D5A1E1CDAE44200FFF729 /* SDWebImagePrefetcher.m in Sources */,
-				180D59F31CDAE11200FFF729 /* SeePhotoViewController.m in Sources */,
 				180D5A1A1CDAE44200FFF729 /* SDWebImageDecoder.m in Sources */,
 				180D5A1B1CDAE44200FFF729 /* SDWebImageDownloader.m in Sources */,
+				180D5A821CDAF8A600FFF729 /* PhotoScrollView.m in Sources */,
 				1818117D1CD9FFC8006BAD6C /* ViewController.m in Sources */,
 				180D5A1D1CDAE44200FFF729 /* SDWebImageManager.m in Sources */,
+				180D5A831CDAF8A600FFF729 /* SeePhotoViewController.m in Sources */,
 				180D5A251CDAE44200FFF729 /* UIView+WebCacheOperation.m in Sources */,
 				180D5A1F1CDAE44200FFF729 /* UIButton+WebCache.m in Sources */,
 				180D5A211CDAE44200FFF729 /* UIImage+MultiFormat.m in Sources */,

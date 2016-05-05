@@ -28,6 +28,10 @@
 }
 
 /**
+ 需要使用第三方库SDWebImage
+ */
+
+/**
  设置显示内容
  array中为NSDictionary
  key：url为网络图片，image为本地图片，base_image工程中的图片，每个字典中有只能存在一个，多个情况下优先级为url->image->base_image
