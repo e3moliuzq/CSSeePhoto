@@ -98,7 +98,6 @@
 		180D5A131CDAE44200FFF729 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		180D5A141CDAE44200FFF729 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		180D5A151CDAE44200FFF729 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		180D5A271CDAE85600FFF729 /* DefineKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKey.h; sourceTree = "<group>"; };
 		180D5A3A1CDAE9C500FFF729 /* chequer_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chequer_1@2x.png"; sourceTree = "<group>"; };
 		180D5A3B1CDAE9C500FFF729 /* chequer_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chequer_2@2x.png"; sourceTree = "<group>"; };
 		180D5A3C1CDAE9C500FFF729 /* chequer_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chequer_3@2x.png"; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		180D5A7F1CDAF8A600FFF729 /* PhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoScrollView.m; sourceTree = "<group>"; };
 		180D5A801CDAF8A600FFF729 /* SeePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeePhotoViewController.h; sourceTree = "<group>"; };
 		180D5A811CDAF8A600FFF729 /* SeePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeePhotoViewController.m; sourceTree = "<group>"; };
+		180D5A881CDAF9AF00FFF729 /* DefineKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKey.h; sourceTree = "<group>"; };
 		181811721CD9FFC8006BAD6C /* CSSeePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSSeePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181811761CD9FFC8006BAD6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		181811781CD9FFC8006BAD6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -229,6 +229,7 @@
 		180D5A7D1CDAF8A600FFF729 /* SeePhoto */ = {
 			isa = PBXGroup;
 			children = (
+				180D5A881CDAF9AF00FFF729 /* DefineKey.h */,
 				180D5A7E1CDAF8A600FFF729 /* PhotoScrollView.h */,
 				180D5A7F1CDAF8A600FFF729 /* PhotoScrollView.m */,
 				180D5A801CDAF8A600FFF729 /* SeePhotoViewController.h */,
@@ -263,7 +264,6 @@
 				180D5A7D1CDAF8A600FFF729 /* SeePhoto */,
 				180D5A4C1CDAEDB900FFF729 /* BaseNavigation */,
 				180D5A391CDAE9C500FFF729 /* Res */,
-				180D5A271CDAE85600FFF729 /* DefineKey.h */,
 				180D59F41CDAE44200FFF729 /* SDWebImage */,
 				181811781CD9FFC8006BAD6C /* AppDelegate.h */,
 				181811791CD9FFC8006BAD6C /* AppDelegate.m */,
