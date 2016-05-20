@@ -19,6 +19,7 @@
     
     BOOL is_show_label;
     BOOL is_label_hide_with_navi;
+    BOOL is_show_save_btn;
     
     UIScrollView *scrollview;
     

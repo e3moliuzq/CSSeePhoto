@@ -100,6 +100,14 @@
     [save_btn addTarget:self action:@selector(saveImage) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:save_btn];
     [self.navigationItem setRightBarButtonItem:rightItem];
+    if (is_show_save_btn) {
+        [save_btn setHidden:NO];
+        [save_btn setEnabled:YES];
+    }
+    else {
+        [save_btn setHidden:YES];
+        [save_btn setEnabled:NO];
+    }
     
     if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending) {
         //这两句话保证uiscrollview系列的位置不会因为回到应用而改变
@@ -160,7 +168,8 @@
 }
 
 - (void)enableSavePhoto:(BOOL)isEnable {
-    if (isEnable) {
+    is_show_save_btn = isEnable;
+    if (is_show_save_btn) {
         [save_btn setHidden:NO];
         [save_btn setEnabled:YES];
     }
