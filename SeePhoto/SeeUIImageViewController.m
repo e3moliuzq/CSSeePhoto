@@ -1,24 +1,24 @@
 //
-//  SeePhotoViewController.m
+//  SeeUIImageViewController.m
+//  CCJPhotoBrowser
 //
-//
-//  Created by e3mo on 16/5/5.
-//  Copyright © 2016年 e3mo. All rights reserved.
+//  Created by e3mo on 16/4/29.
+//  Copyright © 2016年 CCJ. All rights reserved.
 //
 
-#import "SeePhotoViewController.h"
+#import "SeeUIImageViewController.h"
 #import "DefineKey.h"
-#import "PhotoScrollView.h"
-#import "UIImageView+WebCache.h"
 #import "LoadingViewController.h"
+#import "PhotoScrollView.h"
+#import "DefineKey.h"
 
-@interface SeePhotoViewController ()
+@interface SeeUIImageViewController ()
 
 @end
 
 #define SYS_SHOW_IMAGE_TAG          9999
 
-@implementation SeePhotoViewController
+@implementation SeeUIImageViewController
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -74,6 +74,7 @@
     
     [self.view setBackgroundColor:[UIColor blackColor]];
     
+    //dict url为网络图片，image为本地图片，base_image工程中的文件，  desc为文字描述  title为标题文字
     if (!images_arr) {
         images_arr = [[NSMutableArray alloc] init];
     }
@@ -121,7 +122,6 @@
     
     [self addGR];
     [self initScrollView];
-    [self initTextView];
 }
 
 - (void)back:(id)sender {
@@ -138,33 +138,6 @@
 
 - (void)chooseImage:(int)index {
     choose_index = index;
-}
-
-- (void)isShowLabel:(BOOL)isShowLabel {
-    is_show_label = isShowLabel;
-    if (is_show_label) {
-        text_view.hidden = NO;
-    }
-    else {
-        text_view.hidden = YES;
-    }
-}
-
-- (void)isHideLabelWithNaviBar:(BOOL)isHideWith {
-    is_label_hide_with_navi = isHideWith;
-    if (is_show_label) {
-        if (is_label_hide_with_navi) {
-            if (self.navigationController.navigationBar.hidden) {
-                text_view.hidden = YES;
-            }
-            else {
-                text_view.hidden = NO;
-            }
-        }
-        else {
-            text_view.hidden = NO;
-        }
-    }
 }
 
 - (void)enableSavePhoto:(BOOL)isEnable {
@@ -214,27 +187,8 @@
         [imageview setContentMode:UIViewContentModeScaleAspectFit];
         imageview.userInteractionEnabled = YES;
         
-        NSDictionary *dict = [images_arr objectAtIndex:i];
-        NSString *image_str = [dict objectForKey:@"url"];
-        
-        if (image_str && image_str.length > 0) {
-            image_str = [image_str stringByReplacingOccurrencesOfString:@"_cut" withString:@""];//切除string中的cut
-            [imageview sd_setImageWithURL:[NSURL URLWithString:image_str] placeholderImage:[UIImage imageNamed:@"view_loading.png"]];
-        }
-        else {
-            image_str = [dict objectForKey:@"image"];
-            if (image_str && image_str.length > 0) {
-                [imageview setImage:[UIImage imageNamed:image_str]];
-            }
-            else {
-                image_str = [dict objectForKey:@"base_image"];
-                if (image_str && image_str.length > 0) {
-                    [imageview setImage:[UIImage imageNamed:image_str]];
-                }
-                else {
-                    [imageview setImage:[UIImage imageNamed:@"view_loading.png"]];
-                }
-            }
+        if (images_arr && images_arr.count > 0) {
+            [imageview setImage:[images_arr objectAtIndex:i]];
         }
         
         sc_view.childView = imageview;
@@ -247,90 +201,6 @@
     [self.view addSubview:scrollview];
 }
 
-- (void)initTextView {
-    CGSize winsize = [[UIScreen mainScreen] bounds].size;
-    text_view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, winsize.width, 0)];
-    [text_view setBackgroundColor:SYS_UI_COLOR(0, 0, 0, 0.5)];
-    [self.view addSubview:text_view];
-    
-    NSDictionary *dict = [images_arr objectAtIndex:choose_index];
-    NSString *title = [dict objectForKey:@"title"];
-    float desc_y = SYS_UI_SCALE_WIDTH_SIZE(25);
-    if (!title || title.length == 0) {
-        desc_y = SYS_UI_SCALE_WIDTH_SIZE(5);
-        title = @"";
-    }
-    NSString *desc = [dict objectForKey:@"desc"];
-    if (!desc || desc.length == 0) {
-        desc = @"";
-    }
-    
-    UILabel *title_label = [[UILabel alloc] initWithFrame:CGRectMake(SYS_UI_SCALE_WIDTH_SIZE(10), SYS_UI_SCALE_WIDTH_SIZE(5), winsize.width-SYS_UI_SCALE_WIDTH_SIZE(20), SYS_UI_SCALE_WIDTH_SIZE(15))];
-    [title_label setText:title];
-    [title_label setTextColor:[UIColor whiteColor]];
-    [title_label setTextAlignment:NSTextAlignmentLeft];
-    [title_label setFont:[UIFont systemFontOfSize:SYS_UI_SCALE_WIDTH_SIZE(14)]];
-    [title_label setBackgroundColor:[UIColor clearColor]];
-    title_label.tag = 999;
-    [text_view addSubview:title_label];
-    
-    
-    UILabel *desc_label = [[UILabel alloc] initWithFrame:CGRectMake(SYS_UI_SCALE_WIDTH_SIZE(10), desc_y, winsize.width-SYS_UI_SCALE_WIDTH_SIZE(20), 0)];
-    [desc_label setText:desc];
-    [desc_label setTextColor:[UIColor lightGrayColor]];
-    [desc_label setTextAlignment:NSTextAlignmentLeft];
-    desc_label.lineBreakMode = UILineBreakModeCharacterWrap;
-    desc_label.numberOfLines = 0;
-    [desc_label setFont:[UIFont systemFontOfSize:SYS_UI_SCALE_WIDTH_SIZE(12)]];
-    [desc_label setBackgroundColor:[UIColor clearColor]];
-    desc_label.tag = 1000;
-    [desc_label sizeToFit];
-    if (desc_label.frame.size.height > winsize.height/3) {
-        desc_label.frame = CGRectMake(SYS_UI_SCALE_WIDTH_SIZE(10), desc_y, winsize.width-SYS_UI_SCALE_WIDTH_SIZE(20), winsize.height/3);
-    }
-    [text_view addSubview:desc_label];
-    
-    float height = desc_y+desc_label.frame.size.height+SYS_UI_SCALE_WIDTH_SIZE(5);
-    text_view.frame = CGRectMake(0, winsize.height-height, winsize.width, height);
-    
-    if (!is_show_label) {
-        text_view.hidden = YES;
-    }
-}
-
-- (void)changeTextView {
-    CGSize winsize = [[UIScreen mainScreen] bounds].size;
-    
-    NSDictionary *dict = [images_arr objectAtIndex:choose_index];
-    NSString *title = [dict objectForKey:@"title"];
-    float desc_y = SYS_UI_SCALE_WIDTH_SIZE(25);
-    if (!title || title.length == 0) {
-        desc_y = SYS_UI_SCALE_WIDTH_SIZE(5);
-        title = @"";
-    }
-    NSString *desc = [dict objectForKey:@"desc"];
-    if (!desc || desc.length == 0) {
-        desc = @"";
-    }
-    
-    UILabel *title_label = (UILabel*)[text_view viewWithTag:999];
-    UILabel *desc_label = (UILabel*)[text_view viewWithTag:1000];
-    
-    [title_label setText:title];
-    
-    [desc_label setText:desc];
-    
-    desc_label.frame = CGRectMake(SYS_UI_SCALE_WIDTH_SIZE(10), desc_y, winsize.width-SYS_UI_SCALE_WIDTH_SIZE(20), 0);
-    [desc_label sizeToFit];
-    desc_label.tag = 1000;
-    if (desc_label.frame.size.height > winsize.height/3) {
-        desc_label.frame = CGRectMake(SYS_UI_SCALE_WIDTH_SIZE(10), desc_y, winsize.width-SYS_UI_SCALE_WIDTH_SIZE(20), winsize.height/3);
-    }
-    
-    float height = desc_y+desc_label.frame.size.height+SYS_UI_SCALE_WIDTH_SIZE(5);
-    text_view.frame = CGRectMake(0, winsize.height-height, winsize.width, height);
-}
-
 #pragma mark - UIScrollView Delegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     if (scrollView == scrollview) {
@@ -340,19 +210,6 @@
             if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
                 isHiddenStateBar = YES;
                 [self setNeedsStatusBarAppearanceUpdate];
-            }
-            
-            if (is_show_label && is_label_hide_with_navi) {
-                CGSize winsize = [[UIScreen mainScreen] bounds].size;
-                
-                [UIView animateWithDuration:0.2 animations:^{
-                    CGRect frame = text_view.frame;
-                    frame.origin.y = winsize.height;
-                    text_view.frame = frame;
-                    
-                } completion:^(BOOL finished) {
-                    text_view.hidden = YES;
-                }];
             }
         }
     }
@@ -370,7 +227,6 @@
         if (old_choose_index != choose_index) {
             PhotoScrollView *sc_view = (PhotoScrollView*)[scrollview viewWithTag:SYS_SHOW_IMAGE_TAG+old_choose_index];
             [sc_view setZoomScale:1 animated:NO];
-            [self changeTextView];
         }
     }
 }
@@ -410,43 +266,12 @@
             [self.navigationController setNavigationBarHidden:NO animated:YES];
             isHiddenStateBar = NO;
             [self setNeedsStatusBarAppearanceUpdate];
-            
-            if (is_show_label && is_label_hide_with_navi) {
-                CGSize winsize = [[UIScreen mainScreen] bounds].size;
-                CGRect frame = text_view.frame;
-                frame.origin.y = winsize.height;
-                text_view.frame = frame;
-                
-                text_view.hidden = NO;
-                
-                [UIView animateWithDuration:0.2 animations:^{
-                    CGRect frame = text_view.frame;
-                    frame.origin.y = winsize.height-frame.size.height;
-                    text_view.frame = frame;
-                    
-                } completion:^(BOOL finished) {
-                    
-                }];
-            }
         }
         else {
             [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
             [self.navigationController setNavigationBarHidden:YES animated:YES];
             isHiddenStateBar = YES;
             [self setNeedsStatusBarAppearanceUpdate];
-            
-            if (is_show_label && is_label_hide_with_navi) {
-                CGSize winsize = [[UIScreen mainScreen] bounds].size;
-                
-                [UIView animateWithDuration:0.2 animations:^{
-                    CGRect frame = text_view.frame;
-                    frame.origin.y = winsize.height;
-                    text_view.frame = frame;
-                    
-                } completion:^(BOOL finished) {
-                    text_view.hidden = YES;
-                }];
-            }
         }
     }
     else {

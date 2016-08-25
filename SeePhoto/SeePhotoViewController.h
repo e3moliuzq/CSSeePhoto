@@ -41,10 +41,10 @@
  */
 - (void)setImages:(NSArray*)images_array;
 
-- (void)setIsNoNaviMode:(BOOL)isNo;//设置是否显示navigationController,默认显示，YES时如果有label则不会隐藏，点击屏幕则关闭viewcontroller，暂时不能存储图片
+- (void)setIsNoNaviMode:(BOOL)isNo;//设置是否显示navigationController,默认显示，YES时如果有label则不会隐藏，点击屏幕则关闭viewcontroller，NO暂时不能存储图片
 - (void)chooseImage:(int)index;//设置当前显示哪一张图片及其数据，现在只能初始化时使用，默认为0
 - (void)isShowLabel:(BOOL)isShowLabel;//设置是否显示文字title和desc，默认不显示
 - (void)isHideLabelWithNaviBar:(BOOL)isHideWith;//设置文字是否随navi隐藏，主要用于显示navi的情况下滑动图片navi会收起时，默认不隐藏
-- (void)enableSavePhoto:(BOOL)isEnable;//设置是否能存储图片，默认显示
+- (void)enableSavePhoto:(BOOL)isEnable;//设置是否能存储图片，默认显示按钮
 
 @end

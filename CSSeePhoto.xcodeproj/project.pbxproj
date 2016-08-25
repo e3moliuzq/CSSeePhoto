@@ -46,6 +46,7 @@
 		181811851CD9FFC8006BAD6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181811831CD9FFC8006BAD6C /* LaunchScreen.storyboard */; };
 		181811901CD9FFC8006BAD6C /* CSSeePhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818118F1CD9FFC8006BAD6C /* CSSeePhotoTests.m */; };
 		1818119B1CD9FFC8006BAD6C /* CSSeePhotoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818119A1CD9FFC8006BAD6C /* CSSeePhotoUITests.m */; };
+		18D26F3D1D6E9442002FA639 /* SeeUIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D26F3C1D6E9442002FA639 /* SeeUIImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,8 @@
 		181811961CD9FFC8006BAD6C /* CSSeePhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSSeePhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1818119A1CD9FFC8006BAD6C /* CSSeePhotoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSeePhotoUITests.m; sourceTree = "<group>"; };
 		1818119C1CD9FFC8006BAD6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D26F3B1D6E9442002FA639 /* SeeUIImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeUIImageViewController.h; sourceTree = "<group>"; };
+		18D26F3C1D6E9442002FA639 /* SeeUIImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeUIImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +240,8 @@
 				180D5A7F1CDAF8A600FFF729 /* PhotoScrollView.m */,
 				180D5A801CDAF8A600FFF729 /* SeePhotoViewController.h */,
 				180D5A811CDAF8A600FFF729 /* SeePhotoViewController.m */,
+				18D26F3B1D6E9442002FA639 /* SeeUIImageViewController.h */,
+				18D26F3C1D6E9442002FA639 /* SeeUIImageViewController.m */,
 			);
 			path = SeePhoto;
 			sourceTree = SOURCE_ROOT;
@@ -476,6 +481,7 @@
 				180D5A8D1CDB143900FFF729 /* LoadingViewController.m in Sources */,
 				180D5A4F1CDAEDB900FFF729 /* BaseNavigationViewController.m in Sources */,
 				180D5A201CDAE44200FFF729 /* UIImage+GIF.m in Sources */,
+				18D26F3D1D6E9442002FA639 /* SeeUIImageViewController.m in Sources */,
 				180D5A191CDAE44200FFF729 /* SDWebImageCompat.m in Sources */,
 				180D5A171CDAE44200FFF729 /* NSData+ImageContentType.m in Sources */,
 				181811771CD9FFC8006BAD6C /* main.m in Sources */,
